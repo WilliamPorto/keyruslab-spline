@@ -1,4 +1,4 @@
-# Spark em Python e Habilitação do Spline em Scala
+# PySpark e Habilitação do Spline com Scala
 
 1. Criar um projeto em Scala que importa o __SparkSession__ e o __SparkLineageInitializer__. Nesse projeto deve-se criar um método que recebe um __SparkSession__, habilita a linhagem do __Spline__ e retorna um __SparkSession__, tudo isso como objeto Java:
 ```scala
