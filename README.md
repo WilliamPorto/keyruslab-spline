@@ -25,9 +25,9 @@ object Spline {
 from pyspark.sql import SparkSession
 
 spark_p = SparkSession.builder\
-	                  .appName('Spline')\
-	                  .config('spark.sql.warehouse.dir', '/user/hive/warehouse')\
-	                  .getOrCreate()
+	              .appName('Spline')\
+	              .config('spark.sql.warehouse.dir', '/user/hive/warehouse')\
+	              .getOrCreate()
 
 sc = spark_p.sparkContext
 
