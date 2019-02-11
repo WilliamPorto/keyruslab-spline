@@ -210,3 +210,19 @@ cp /root/JARs/meu_jar_pequeno.jar /usr/hdp/current/spark2-client/jars/meu_jar_pe
 ```
 
 # Diferença da Persistência em Atlas
+
+A persistência em Atlas tem dois pequenos diferenciais dos demais.
+
+1. Os desenvolvedores do Spline pararam de oferecer suporte ao Atlas na versão 0.3.1, portanto, caso você queira utilizar o Spline persistindo no Atlas é necessário que você utilize as dependências 0.3.1, por isso na sessão __Acabando com o JAR Completo__ é apresentado o download apenas das dependências 0.3.1.
+
+2. Para utilizar o Atlas é preciso colocar um arquivo de modelo de persistência dentro da pasta models do Atlas, é um arquivo JSON que mostra ao Atlas como o Spline enviará as informações para ele persistir em sua linhagem.
+
+A boa notícia é que você pode fazer o download do [Atlas Metal Model](https://search.maven.org/remotecontent?filepath=za/co/absa/spline/spline-persistence-atlas/0.3.1/spline-persistence-atlas-0.3.1-atlas-meta-model.json "Baixar Agora"), caso queira procurar por conta própria, apenas entre no [Search Maven](https://search.maven.org/ "Search Maven") e busque a dependência do __spline-persistence-atlas-0.3.1__, lá terá o modelo para ser baixado.
+
+Veja se serve para você, mas no meu caso, foi copiado assim:
+
+```
+cp /root/Model/spline-meta-model.json /usr/hdp/current/atlas-client/models/spline-meta-model.json
+```
+
+Um passo muito importante que não deve ser esquecido, após copiar esse arquivo de modelo, reinicie o Atlas, sério, isso não funcionará se não for reiniciado, então sim, você poderá utilizar o Spline persistindo no Atlas.
