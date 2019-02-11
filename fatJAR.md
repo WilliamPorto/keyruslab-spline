@@ -28,11 +28,12 @@ Uma boa ferramenta para gerar Fat Jars é o SBT, uma ferramenta de construção 
 	resolvers += Resolver.bintrayIvyRepo("com.eed3si9n", "sbt-plugins")
     
 * Defina as dependências a serem adicionadas no arquivo build.sbt
-
+	```
 	libraryDependencies += "za.co.absa.spline" % "spline-core" % "0.3.1"
 	libraryDependencies += "za.co.absa.spline" % "spline-persistence-mongo" % "0.3.1"
 	libraryDependencies += "za.co.absa.spline" % "spline-core-spark-adapter-2.3" % "0.3.1"
 	libraryDependencies += "za.co.absa.spline" % "spline-persistence-atlas" % "0.3.1"
+	```
     
 * Depois disso você pode rodar o comando  `$ sbt assembly` e um JAR com todas as dependências (O famoso Fat JAR) vai ser gerado para você.
     
