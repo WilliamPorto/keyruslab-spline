@@ -18,8 +18,15 @@ spark_p = SparkSession.builder\
 
 sc = spark_p.sparkContext
 
-spark_j = sc._jvm.com.spline.Spline.sparkLineage(spark_p._jsparkSession)
-spark = SparkSession(sc, spark_j)
+#GET JVM FROM OUR SPARKCONTEXT
+jvm=sc._jvm
+#FROM org.apache.pyspark.sql.SparkSession GET A JavaSparkSession
+jsparkSession = spark._jsparkSession
+#GET org.apache.spark.sql.SparkSession FROM Scala Jar
+ssl=jvm.mySplinePackage.PysparkHandler.setSparkListener(jsparkSession)
+#GET org.apache.pyspark.sql.SparkSession
+#BY CALLING SparkSession(org.apache.pyspark.sql.SparkContext,org.apache.spark.sql.SparkSession)
+sparkEnabledLineage=SparkSesion(sc,ssl)
 
-# spark...
+#AGORA TEMOS UM SparkSession COM O LineageTracking ENABLED
 ```
