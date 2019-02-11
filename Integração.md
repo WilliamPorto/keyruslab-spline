@@ -22,9 +22,9 @@ object Spline {
 
 }
 ```
-- Gerar um FatJAR do código Scala a cima  
-- Carregar o FatJAR em nossa aplicação ( pyspark --jars myFileJar.jar )
-- Acessar o FatJAR e seus objetos em nossa aplicação 
+- Gerar um [FatJAR](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md) do código Scala a cima  
+- Carregar o [FatJAR](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md) em nossa aplicação ( pyspark --jars myFileJar.jar )
+- Acessar o [FatJAR](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md) e seus objetos em nossa aplicação 
 
 ```python
 from pyspark.sql import SparkSession
