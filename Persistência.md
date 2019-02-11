@@ -67,7 +67,7 @@ A persistência em Atlas tem dois pequenos diferenciais dos demais.
 
 A boa notícia é que você pode fazer o download do [Atlas Metal Model](https://search.maven.org/remotecontent?filepath=za/co/absa/spline/spline-persistence-atlas/0.3.1/spline-persistence-atlas-0.3.1-atlas-meta-model.json "Baixar Agora"), caso queira procurar por conta própria, apenas entre no [Search Maven](https://search.maven.org/ "Search Maven") e busque a dependência do __spline-persistence-atlas-0.3.1__, lá terá o modelo para ser baixado.
 
-Veja se serve para você, mas no meu caso, foi copiado assim:
+Veja se serve para você, mas no meu caso, foi copiado o arquivo de modelo para dentro da pasta de instalação do Atlas assim:
 
 ```
 cp /root/Model/spline-meta-model.json /usr/hdp/current/atlas-client/models/spline-meta-model.json
