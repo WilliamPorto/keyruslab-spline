@@ -61,7 +61,7 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persisten
 
 A persistência em Atlas tem dois pequenos diferenciais dos demais.
 
-1. Os desenvolvedores do Spline pararam de oferecer suporte ao Atlas na versão 0.3.1, portanto, caso você queira utilizar o Spline persistindo no Atlas é necessário que você utilize as dependências 0.3.1.
+1. Os desenvolvedores do Spline pararam de oferecer suporte ao Atlas na versão 0.3.1, portanto, caso você queira utilizar o Spline persistindo no Atlas é necessário que você utilize as dependências 0.3.1. A previsão é que uma nova API resolva esses problemas na versão 0.4, enquanto isso, é preciso seguir esse tutorial.
 
 2. Para utilizar o Atlas é preciso colocar um arquivo de modelo de persistência dentro da pasta models do Atlas, é um arquivo JSON que mostra ao Atlas como o Spline enviará as informações para ele persistir em sua linhagem.
 
@@ -75,9 +75,7 @@ cp /root/Model/spline-meta-model.json /usr/hdp/current/atlas-client/models/splin
 
 Um passo muito importante que não deve ser esquecido, após copiar esse arquivo de modelo, reinicie o Atlas, sério, isso não funcionará se não for reiniciado, então sim, você poderá utilizar o Spline persistindo no Atlas.
 
-O ATLAS foi descontínuado desde a versão SPLINE0.3.2, a integração estava com algumas falhas e a documentação que a equipe do SPLINE disponibilizava era insuficiente. A previsão é que uma nova API resolva esses problemas na versão 0.4, enquanto isso... Descrevemos nesse documento uma forma de habilitar o ATLAS, fazendo apenas algumas alterações nos arquivos do SPLINE.
-
-Há tendência é que eles voltem a oferecer suporte, mas por enquanto devemos respeitar as versões que funcionaram corretamente, segue:
+Importante dizer que devemos respeitar as versões que funcionaram corretamente, segue:
 
 - Spark 2.3.0.2.6.5.0
 - Apache Atlas 0.8.0.2.6.5.0
@@ -85,9 +83,6 @@ Há tendência é que eles voltem a oferecer suporte, mas por enquanto devemos r
 - Kafka 1.0.0.2.6.5.0
 
 Primeiro, você deve alterar o arquivo atlas-application-.properties para estabelecer a conexão do Spline com o Atlas kafka topic, da mesma maneira que você configuraria qualquer outra conxão do Atlas.
-
-Depois, copie o arquivo spline-meta-model.json para a pasta models do Atlas, é um arquivo JSON que mostra ao Atlas como o Spline enviará as informações para ele persistir em sua linhagem. (na Hortonworks o caminho é : /usr/hdp/current/atlas/models)
-
 
 #### Executar script PySpark com SPLINE persistindo no Atlas:
 
