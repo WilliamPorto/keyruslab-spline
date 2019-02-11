@@ -40,7 +40,7 @@ __Vantagem__: Apenas as dependências necessárias serão utilizadas, evitando d
 * [kafka-clients-1.1.0.jar](https://search.maven.org/remotecontent?filepath=org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0.jar "Baixar Agora")
 * [spline-sample-0.3.1.jar](https://search.maven.org/remotecontent?filepath=za/co/absa/spline/spline-sample/0.3.1/spline-sample-0.3.1.jar "Baixar Agora")
 
-Com essas dependências mais o JAR feito em Scala, copiado dentro do core do Spark, tudo funcionará, qualquer tipo de persistência, bastando apenas que você envie as propriedades necessárias no ```spark-submit``` de acordo com a sessão __Executar Script com Spark-Submit__, mas um detalhe, agora não é preciso colocar a parte ```--jars nome_do_jar_completo.jar``` pois seus JARs já estarão dentro do core do Spark e serão compilados tudo dentro do Spark Context ao executar o ```spark-submit```.
+Com essas dependências mais o JAR feito em Scala, copiado dentro do core do Spark, tudo funcionará, qualquer tipo de persistência, bastando apenas que você envie as propriedades necessárias no ```spark-submit``` de acordo com [esse documento](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md "esse documento"), mas um detalhe, agora não é preciso colocar a parte ```--jars nome_do_jar_completo.jar``` pois seus JARs já estarão dentro do core do Spark e serão compilados tudo dentro do Spark Context ao executar o ```spark-submit```.
 
 Desfrute do seu SPLINE apenas enviando o Script em Python, lembrando que seu Script em Python precisa chamar o método do Scala para habilitar o SPLINE. Observe uma chamada para persistir os dados no MongoDB depois desse processo:
 
