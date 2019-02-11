@@ -58,7 +58,7 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persisten
 
 Provavelmente você teria 3 perguntas básicas, pois eu teria:
 
-1. Se algum link não funcionar, como eu poderei buscar por conta própria as dependências? Resposta: Acesse o [Search Maven](https://search.maven.org/ "Search Maven") e busque qualquer dependência, lembrando que as do SPLINE são específicas, então, não fugirá do que está a cima, ao encontrar a dependência o site disponibilizará várias formas de download, incluindo o JAR.
+1. Se algum link não funcionar, como eu poderei buscar por conta própria as dependências? Resposta: Acesse o [Search Maven](https://search.maven.org/ "Search Maven") e busque qualquer dependência, lembrando que as do SPLINE são específicas, então, não fugirá do que está a cima, ao encontrar a dependência o site disponibilizará várias formas de download, incluindo o JAR. Pensando em possíveis problemas, [guardamos no repositório](https://github.com/WilliamPorto/keyruslab-spline/tree/master/Downloads "guardamos no repositório") para você.
 
 2. Porque todas as dependências do SPLINE foram utilizadas na versão 0.3.1? Resposta: Isso será explicado na sessão sobre o Atlas.
 
