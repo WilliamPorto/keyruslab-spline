@@ -1,7 +1,10 @@
-# Integração do SPLINE com PySpark
+# Integrate spline with pyspark
 
+Toda a aplicação do SPLINE gira em torno do método `spark.enableLineageTracking()`, ele habilita a LineageTracking em nosso SparkSession e a partir dai todas as operações com os dados estão sendo persistidas em algum sistema (Mongodb, HDFS, ATLAS...)
 
-1. Criar um projeto em Scala que importa o __SparkSession__ e o __SparkLineageInitializer__. Nesse projeto deve-se criar um método que recebe um __SparkSession__, habilita a linhagem do __SPLINE__ e retorna um __SparkSession__, tudo isso como objeto Java:
+O problema é que o SPLINE foi desenvolvido para Scala e por isso não é possível chamar o método em um objeto org.apache.<strong>pyspark</strong>.sql.SparkSession
+
+A solução é criar um objeto PysparkHandler em Scala para receber o SparkSession do pyspark, e retornar uma SparkSession com o SPLINE habilitado:
 ```scala
 package com.spline
 
@@ -19,8 +22,9 @@ object Spline {
 
 }
 ```
-2. [Gere um JAR completo](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md "Gere um JAR completo") do código a cima com todas as dependências do SPLINE utilizando o SBT.
-3. Em Python devemos criar o __Spark Context__, chamar o método criado em Scala utilizando a JVM e passando o Spark Context __em formato de objeto Java__, receber o retorno do Spark Context no mesmo formato com o SPLINE habilitado e então __transformar o Spark Context em objeto Python__ para fazer o Job com a linhagem de dados do SPLINE habilitado:
+- Gerar um FatJAR do código Scala a cima  
+- Carregar o FatJAR em nossa aplicação ( pyspark --jars myFileJar.jar )
+- Acessar o FatJAR e seus objetos em nossa aplicação 
 
 ```python
 from pyspark.sql import SparkSession
@@ -32,9 +36,15 @@ spark_p = SparkSession.builder\
 
 sc = spark_p.sparkContext
 
-spark_j = sc._jvm.com.spline.Spline.sparkLineage(spark_p._jsparkSession)
-spark = SparkSession(sc, spark_j)
+#GET JVM FROM OUR SPARKCONTEXT
+jvm=sc._jvm
+#FROM org.apache.pyspark.sql.SparkSession GET A JavaSparkSession
+jsparkSession = spark._jsparkSession
+#GET org.apache.spark.sql.SparkSession FROM Scala Jar
+ssl=jvm.mySplinePackage.PysparkHandler.setSparkListener(jsparkSession)
+#GET org.apache.pyspark.sql.SparkSession
+#BY CALLING SparkSession(org.apache.pyspark.sql.SparkContext,org.apache.spark.sql.SparkSession)
+sparkEnabledLineage=SparkSesion(sc,ssl)
 
-# spark...
+#AGORA TEMOS UM SparkSession COM O LineageTracking ENABLED
 ```
-4. [Execute o seu Script em Python](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Execute o seu Script em Python") com ```spark-submit``` __enviando junto o [JAR completo](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md "JAR completo")__ criado, ou apenas __copie seu JAR dentro da pasta JARs do Spark__ e execute seu Script com o PySpark Shell ou até com o ```spark-submit``` sem a necessidade de enviar seu JAR completo.
