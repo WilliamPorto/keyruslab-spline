@@ -57,6 +57,7 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persisten
 <br>
 <br>
 ## ATLAS:
+
 O ATLAS foi descontínuado desde a versão spline0.3.2, a integração estava com algumas falhas e a documentação que a equipe do SPLINE disponibilizava era insuficiente. A previsão é que uma nova API resolva esses problemas na versão 0.4, enquanto isso... Descrevemos nesse documento uma forma de habilitar o ATLAS, fazendo apenas algumas alterações nos arquivos do SPLINE.
 #### Executar script PySpark com Spline persistindo no Atlas:
 
