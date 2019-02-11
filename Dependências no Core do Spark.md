@@ -60,7 +60,7 @@ Provavelmente você teria 3 perguntas básicas, pois eu teria:
 
 1. Se algum link não funcionar, como eu poderei buscar por conta própria as dependências? Resposta: Acesse o [Search Maven](https://search.maven.org/ "Search Maven") e busque qualquer dependência, lembrando que as do SPLINE são específicas, então, não fugirá do que está a cima, ao encontrar a dependência o site disponibilizará várias formas de download, incluindo o JAR. Pensando em possíveis problemas, [guardamos no repositório](https://github.com/WilliamPorto/keyruslab-spline/tree/master/Downloads "guardamos no repositório") para você.
 
-2. Porque todas as dependências do SPLINE foram utilizadas na versão 0.3.1? Resposta: Isso será explicado na sessão sobre o Atlas.
+2. Porque todas as dependências do SPLINE foram utilizadas na versão 0.3.1? Resposta: Isso [foi explicado aqui](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persist%C3%AAncia.md "foi explicado aqui").
 
 3. Aonde eu coloco todos esses JARs baixados? Resposta: Talvez a pergunta mais importante, é claro, precisamos colocar em algum local, esse local deve ser o core do Spark, é necessário que você encontre a pasta de JARs que fica dentro da instalação do seu Spark e colar lá junto com os vários outros JARs que já estão lá, abaixo será mostrado o meu caso, talvez sirva para você:
 
