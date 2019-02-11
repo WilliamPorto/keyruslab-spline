@@ -1,6 +1,6 @@
 # Persistências do SPLINE 
 
-Inicialmente o SPLINE tinha três alternativas para fazer o registro desse data lineage, MONGODB, HDFS e ATLAS.
+Inicialmente o SPLINE tinha três alternativas para fazer o registro da linhagem de dados, MONGODB, HDFS e ATLAS.
 
 
 ## MONGODB:
