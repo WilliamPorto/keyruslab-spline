@@ -1,7 +1,7 @@
 # Integrate SPLINE com PySpark
 
 
-1. Criar um projeto em Scala que importa o __SparkSession__ e o __SparkLineageInitializer__. Nesse projeto deve-se criar um método que recebe um __SparkSession__, habilita a linhagem do __Spline__ e retorna um __SparkSession__, tudo isso como objeto Java:
+1. Criar um projeto em Scala que importa o __SparkSession__ e o __SparkLineageInitializer__. Nesse projeto deve-se criar um método que recebe um __SparkSession__, habilita a linhagem do __SPLINE__ e retorna um __SparkSession__, tudo isso como objeto Java:
 ```scala
 package com.spline
 
@@ -19,8 +19,8 @@ object Spline {
 
 }
 ```
-2. Gere um JAR completo do código a cima com todas as dependências do Spline utilizando o SBT, __vide sessão específica__.
-3. Em Python devemos criar o __Spark Context__, chamar o método criado em Scala utilizando a JVM e passando o Spark Context __em formato de objeto Java__, receber o retorno do Spark Context no mesmo formato com o Spline habilitado e então __transformar o Spark Context em objeto Python__ para fazer o Job com a linhagem de dados do Spline habilitado:
+2. Gere um JAR completo do código a cima com todas as dependências do SPLINE utilizando o SBT, __vide sessão específica__.
+3. Em Python devemos criar o __Spark Context__, chamar o método criado em Scala utilizando a JVM e passando o Spark Context __em formato de objeto Java__, receber o retorno do Spark Context no mesmo formato com o SPLINE habilitado e então __transformar o Spark Context em objeto Python__ para fazer o Job com a linhagem de dados do SPLINE habilitado:
 
 ```python
 from pyspark.sql import SparkSession
