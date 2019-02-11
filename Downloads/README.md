@@ -1,6 +1,6 @@
 # Mapa
 
-__Atlas Meta Model__: Modelo JSON do Atlas para persistência de linhagem
+__Atlas Meta Model__: Modelo JSON do Atlas para persistência de linhagem.
 
 __Dependências do Spline 0.3.1__: Dependências do Spline baixadas manualmente, aqui consta inclusive as diversas dependências do Spark Adapter, ou seja, para o Spark 2.2, 2.3 e 2.4, a diferença é que o Spark 2.4 apenas tem na versão do Spline 0.3.6.
 
