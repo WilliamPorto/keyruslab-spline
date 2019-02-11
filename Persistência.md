@@ -82,9 +82,7 @@ Importante dizer que devemos respeitar as versões que funcionaram corretamente,
 - Spline 0.3.1
 - Kafka 1.0.0.2.6.5.0
 
-Primeiro, você deve alterar o arquivo atlas-application-.properties para estabelecer a conexão do Spline com o Atlas kafka topic, da mesma maneira que você configuraria qualquer outra conxão do Atlas.
-
-#### Executar script PySpark com SPLINE persistindo no Atlas:
+#### Executar script PySpark com SPLINE persistindo no Atlas utilizando o JAR Completo:
 
 ```
 spark-submit --conf "spark.driver.extraJavaOptions=-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.atlas.AtlasPersistenceFactory -Datlas.kafka.bootstrap.servers=caminho_do_bootstrap_server:porta_do_bootstrap_server" --jars nome_do_jar_completo.jar script_pyspark.py
@@ -94,6 +92,18 @@ ou
 
 ```
 spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.atlas.AtlasPersistenceFactory -Datlas.kafka.bootstrap.servers=caminho_do_bootstrap_server:porta_do_bootstrap_server" --jars nome_do_jar_completo.jar script_pyspark.py
+```
+
+#### Executar script PySpark com SPLINE persistindo no Atlas utilizando o JAR Completo:
+
+```
+spark-submit --conf "spark.driver.extraJavaOptions=-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.atlas.AtlasPersistenceFactory -Datlas.kafka.bootstrap.servers=caminho_do_bootstrap_server:porta_do_bootstrap_server" script_pyspark.py
+```
+
+ou
+
+```
+spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.atlas.AtlasPersistenceFactory -Datlas.kafka.bootstrap.servers=caminho_do_bootstrap_server:porta_do_bootstrap_server" script_pyspark.py
 ```
 
 > Utilizado: -Datlas.kafka.bootstrap.servers=sandbox-hdp.hortonworks.com:6667
