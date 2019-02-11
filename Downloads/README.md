@@ -7,7 +7,7 @@ __Dependências do Spline 0.3.1__: Dependências do Spline baixadas manualmente,
 __Habilitação do Spline com Scala__: Código produzido pela Keyrus para conexão do PySpark com o Spline utilizando o Scala, utilize a chamada por meio da JVM do mesmo jeito que foi utilizado abaixo, pois o objeto, método e demais tem um nome específico.
 
 <br>
-*Em Python devemos criar o __Spark Context__, chamar o método criado em Scala utilizando a JVM e passando o Spark Context __em formato de objeto Java__, receber o retorno do Spark Context no mesmo formato com o Spline habilitado e então __transformar o Spark Context em objeto Python__ para fazer o Job com a linhagem de dados do Spline habilitado:
+- Em Python devemos criar o __Spark Context__, chamar o método criado em Scala utilizando a JVM e passando o Spark Context __em formato de objeto Java__, receber o retorno do Spark Context no mesmo formato com o Spline habilitado e então __transformar o Spark Context em objeto Python__ para fazer o Job com a linhagem de dados do Spline habilitado:
 
 ```python
 from pyspark.sql import SparkSession
