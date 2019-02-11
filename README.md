@@ -201,7 +201,7 @@ cp /root/JARs/kafka-clients-1.1.0.jar /usr/hdp/current/spark2-client/jars/kafka-
 cp /root/JARs/spline-sample-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-sample-0.3.1.jar
 ```
 
-Caso queira, poderá continuar enviando seu JAR pequeno na chamada do ```spark-submit```, mas seu JAR pequeno dessa vez, ou seja, apenas com o código feito em Scala sem dependências, pois as dependências já estão no core do Spark, mas eu acredito que seria mais interessante já colocar o seu JAR pequeno dentro do core do Spark, assim você realmente não precisará enviar nada para o ```spark-submit```.
+Caso queira, poderá continuar enviando seu JAR na chamada do ```spark-submit```, mas seu JAR pequeno dessa vez, ou seja, apenas com o código feito em Scala sem dependências, pois as dependências já estão no core do Spark, mas eu acredito que seria mais interessante já colocar o seu JAR pequeno dentro do core do Spark, assim você realmente não precisará enviar nada para o ```spark-submit```.
 
 Então, gere seu JAR e copie no mesmo lugar:
 
