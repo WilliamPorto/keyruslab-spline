@@ -25,14 +25,20 @@ Uma boa ferramenta para gerar Fat Jars é o SBT, uma ferramenta de construção 
 
 
 	addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.2")
+	resolvers += Resolver.bintrayIvyRepo("com.eed3si9n", "sbt-plugins")
     
-    
+* Defina as dependências a serem adicionadas no arquivo build.sbt
+
+	libraryDependencies += "za.co.absa.spline" % "spline-core" % "0.3.1"
+	libraryDependencies += "za.co.absa.spline" % "spline-persistence-mongo" % "0.3.1"
+	libraryDependencies += "za.co.absa.spline" % "spline-core-spark-adapter-2.3" % "0.3.1"
+	libraryDependencies += "za.co.absa.spline" % "spline-persistence-atlas" % "0.3.1"
     
 * Depois disso você pode rodar o comando  `$ sbt assembly` e um JAR com todas as dependências (O famoso Fat JAR) vai ser gerado para você.
     
 * <strong>Throubleshooting</strong>: "deduplicate: different file contents found in the following:"
 
-	Esse é um erro muito comum quando estamos incluindo as dependências do projeto, temos que passar uma denifinição para o sbt-assembly de como resolver esse erro.
+	Esse é um erro muito comum quando estamos incluindo as dependências do projeto, temos que passar uma denifinição para o sbt-assembly de como resolver esse erro (configurar o build.sbt).
     
     `assemblyMergeStrategy Python2.0 :`
     
