@@ -37,4 +37,4 @@ spark = SparkSession(sc, spark_j)
 
 # spark...
 ```
-4. [Execute o seu Script em Python](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistence.md "Execute o seu Script em Python") com ```spark-submit``` __enviando junto o JAR completo__ criado, ou apenas __copie seu JAR dentro da pasta JARs do Spark__ e execute seu Script com o PySpark Shell ou até com o ```spark-submit``` sem a necessidade de enviar seu JAR completo.
+4. [Execute o seu Script em Python](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Execute o seu Script em Python") com ```spark-submit``` __enviando junto o JAR completo__ criado, ou apenas __copie seu JAR dentro da pasta JARs do Spark__ e execute seu Script com o PySpark Shell ou até com o ```spark-submit``` sem a necessidade de enviar seu JAR completo.
