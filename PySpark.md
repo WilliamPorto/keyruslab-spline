@@ -19,7 +19,7 @@ object Spline {
 
 }
 ```
-2. Gere um JAR completo do código a cima com todas as dependências do SPLINE utilizando o SBT, __vide sessão específica__.
+2. [Gere um JAR completo](https://github.com/WilliamPorto/keyruslab-spline/blob/master/fatJAR.md "Gere um JAR completo") do código a cima com todas as dependências do SPLINE utilizando o SBT.
 3. Em Python devemos criar o __Spark Context__, chamar o método criado em Scala utilizando a JVM e passando o Spark Context __em formato de objeto Java__, receber o retorno do Spark Context no mesmo formato com o SPLINE habilitado e então __transformar o Spark Context em objeto Python__ para fazer o Job com a linhagem de dados do SPLINE habilitado:
 
 ```python
