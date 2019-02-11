@@ -208,3 +208,5 @@ Então, gere seu JAR e copie no mesmo lugar:
 ```
 cp /root/JARs/meu_jar_pequeno.jar /usr/hdp/current/spark2-client/jars/meu_jar_pequeno.jar
 ```
+
+# Diferença da Persistência em Atlas
