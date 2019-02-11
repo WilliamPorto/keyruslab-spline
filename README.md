@@ -147,3 +147,19 @@ Vantagem: Apenas as dependências necessárias serão utilizadas, evitando depen
 * [json4s-ext_2.11-3.2.11.jar](https://search.maven.org/remotecontent?filepath=org/json4s/json4s-ext_2.11/3.2.11/json4s-ext_2.11-3.2.11.jar "Baixar Agora")
 * [kafka-clients-1.1.0.jar](https://search.maven.org/remotecontent?filepath=org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0.jar "Baixar Agora")
 * [spline-sample-0.3.1.jar](https://search.maven.org/remotecontent?filepath=za/co/absa/spline/spline-sample/0.3.1/spline-sample-0.3.1.jar "Baixar Agora")
+
+Com essas dependências mais o JAR feito em Scala, copiado dentro do core do Spark, tudo funcionará, qualquer tipo de persistência, bastando apenas que você envie as propriedades necessárias no ```spark-submit``` de acordo com a sessão __Executar Script com Spark-Submit__, mas um detalhe, agora não é preciso colocar a parte ```--jars nome_do_jar_completo.jar``` pois seus JARs já estarão dentro do core do Spark e serão compilados tudo dentro do Spark Context ao executar o ```spark-submit```.
+
+Desfrute do seu Spline apenas enviando o Script em Python, lembrando que seu Script em Python precisa chamar o método do Scala para habilitar o Spline. Observe uma chamada para persistir os dados no MongoDB depois desse processo:
+
+```
+spark-submit --conf "spark.driver.extraJavaOptions=-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.mongo.MongoPersistenceFactory -Dspline.mongodb.url=mongodb://caminho_do_banco:porta_do_banco -Dspline.mongodb.name=nome_do_banco" script_pyspark.py
+```
+
+ou
+
+```
+spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.mongo.MongoPersistenceFactory -Dspline.mongodb.url=mongodb://caminho_do_banco:porta_do_banco -Dspline.mongodb.name=nome_do_banco" script_pyspark.py
+```
+
+> Utilizado: -Dspline.mongodb.url=mongodb://127.0.0.1:27017 -Dspline.mongodb.name=db_spline
