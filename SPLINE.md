@@ -17,4 +17,4 @@ O projeto do SPLINE foi desenvolvido somente para o SPARK Scala. Segue documenta
 
 A documentação oficial deixa a desejar, faltam alguns exemplos e passos importantes para a implementação. Segue uma descrição de como trabalhar com as difetentes alternativas de persistência.
 
-<https://github.com/WilliamPorto/keyruslab-spline/blob/master/PERSISTENCE>
+<https://github.com/WilliamPorto/keyruslab-spline/blob/master/PERSISTENCE.md>
