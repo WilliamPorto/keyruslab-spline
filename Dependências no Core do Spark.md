@@ -1,13 +1,13 @@
 # Dependências no Core do Spark
 
-O JAR completo nada mais é que um JAR criado a partir do código Scala apresentado na sessão __PySpark e Habilitação do Spline com Scala__ com todas as dependências necessárias, conforme apresentado na sessão específica.
+O JAR completo nada mais é que um JAR criado a partir do código Scala apresentado na sessão __PySpark e Habilitação do SPLINE com Scala__ com todas as dependências necessárias, conforme apresentado na sessão específica.
 
-A novidade é que é possível gerar um JAR sem dependências, a pergunta é: É possível gerar o JAR do Spline sem dependência?
+A novidade é que é possível gerar um JAR sem dependências, a pergunta é: É possível gerar o JAR do SPLINE sem dependência?
 Resposta: Não.
 
-O código que é feito em Scala utiliza o Spline, uma biblioteca externa, por ser uma biblioteca externa é preciso que sua dependência seja baixada: Então como é possível gerar o JAR sem as dependências?
+O código que é feito em Scala utiliza o SPLINE, uma biblioteca externa, por ser uma biblioteca externa é preciso que sua dependência seja baixada: Então como é possível gerar o JAR sem as dependências?
 
-Na verdade, você gerará um JAR pequeno, que contenha apenas o código feito em Scala, mas como as dependências são necessárias para o Spark entender o que seu código está utilizando, é preciso baixar todas as dependências do Spline que será utilizado e mais as dependências das dependências do Spline, tudo isso manualmente.
+Na verdade, você gerará um JAR pequeno, que contenha apenas o código feito em Scala, mas como as dependências são necessárias para o Spark entender o que seu código está utilizando, é preciso baixar todas as dependências do SPLINE que será utilizado e mais as dependências das dependências do SPLINE, tudo isso manualmente.
 
 Desvantagem: Será preciso fazer tudo manualmente, desnecessário já que o Maven serve para isso.
 
@@ -42,7 +42,7 @@ Vantagem: Apenas as dependências necessárias serão utilizadas, evitando depen
 
 Com essas dependências mais o JAR feito em Scala, copiado dentro do core do Spark, tudo funcionará, qualquer tipo de persistência, bastando apenas que você envie as propriedades necessárias no ```spark-submit``` de acordo com a sessão __Executar Script com Spark-Submit__, mas um detalhe, agora não é preciso colocar a parte ```--jars nome_do_jar_completo.jar``` pois seus JARs já estarão dentro do core do Spark e serão compilados tudo dentro do Spark Context ao executar o ```spark-submit```.
 
-Desfrute do seu Spline apenas enviando o Script em Python, lembrando que seu Script em Python precisa chamar o método do Scala para habilitar o Spline. Observe uma chamada para persistir os dados no MongoDB depois desse processo:
+Desfrute do seu SPLINE apenas enviando o Script em Python, lembrando que seu Script em Python precisa chamar o método do Scala para habilitar o SPLINE. Observe uma chamada para persistir os dados no MongoDB depois desse processo:
 
 ```
 spark-submit --conf "spark.driver.extraJavaOptions=-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.mongo.MongoPersistenceFactory -Dspline.mongodb.url=mongodb://caminho_do_banco:porta_do_banco -Dspline.mongodb.name=nome_do_banco" script_pyspark.py
@@ -58,9 +58,9 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persisten
 
 Provavelmente você teria 3 perguntas básicas, pois eu teria:
 
-1. Se algum link não funcionar, como eu poderei buscar por conta própria as dependências? Resposta: Acesse o [Search Maven](https://search.maven.org/ "Search Maven") e busque qualquer dependência, lembrando que as do Spline são específicas, então, não fugirá do que está a cima, ao encontrar a dependência o site disponibilizará várias formas de download, incluindo o JAR.
+1. Se algum link não funcionar, como eu poderei buscar por conta própria as dependências? Resposta: Acesse o [Search Maven](https://search.maven.org/ "Search Maven") e busque qualquer dependência, lembrando que as do SPLINE são específicas, então, não fugirá do que está a cima, ao encontrar a dependência o site disponibilizará várias formas de download, incluindo o JAR.
 
-2. Porque todas as dependências do Spline foram utilizadas na versão 0.3.1? Resposta: Isso será explicado na sessão sobre o Atlas.
+2. Porque todas as dependências do SPLINE foram utilizadas na versão 0.3.1? Resposta: Isso será explicado na sessão sobre o Atlas.
 
 3. Aonde eu coloco todos esses JARs baixados? Resposta: Talvez a pergunta mais importante, é claro, precisamos colocar em algum local, esse local deve ser o core do Spark, é necessário que você encontre a pasta de JARs que fica dentro da instalação do seu Spark e colar lá junto com os vários outros JARs que já estão lá, abaixo será mostrado o meu caso, talvez sirva para você:
 
