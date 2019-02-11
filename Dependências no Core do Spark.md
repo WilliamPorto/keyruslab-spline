@@ -9,9 +9,9 @@ O código que é feito em Scala utiliza o SPLINE, uma biblioteca externa, por se
 
 Na verdade, você gerará um JAR pequeno, que contenha apenas o código feito em Scala, mas como as dependências são necessárias para o Spark entender o que seu código está utilizando, é preciso baixar todas as dependências do SPLINE que será utilizado e mais as dependências das dependências do SPLINE, tudo isso manualmente.
 
-Desvantagem: Será preciso fazer tudo manualmente, desnecessário já que o Maven serve para isso.
+__Desvantagem__: Será preciso fazer tudo manualmente, desnecessário já que o Maven serve para isso.
 
-Vantagem: Apenas as dependências necessárias serão utilizadas, evitando dependências desnecessárias conforme os imports utilizados no Scala. Preparação do ambiente definitivo, já que as dependências ficarão diretamente no core do Spark. Tudo está prontinho abaixo apenas para baixar e copiar para a pasta específica.
+__Vantagem__: Apenas as dependências necessárias serão utilizadas, evitando dependências desnecessárias conforme os imports utilizados no Scala. Preparação do ambiente definitivo, já que as dependências ficarão diretamente no core do Spark. Tudo está prontinho abaixo apenas para baixar e copiar para a pasta específica.
 
 * [spline-commons-0.3.1.jar](https://search.maven.org/remotecontent?filepath=za/co/absa/spline/spline-commons/0.3.1/spline-commons-0.3.1.jar "Baixar Agora")
 * [spline-core-0.3.1.jar](https://search.maven.org/remotecontent?filepath=za/co/absa/spline/spline-core/0.3.1/spline-core-0.3.1.jar "Baixar Agora")
