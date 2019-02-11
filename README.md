@@ -12,7 +12,7 @@ O projeto consiste em duas partes:
 
 #### E uma Web UserInterface para a visualização dos dados registrados.
 
-* A documentação oficial deixa a desejar, faltam alguns exemplos e passos importantes para a implementação. [Segue uma descrição](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistence.md "Segue uma descrição") de como trabalhar com as diferentes alternativas de persistência.
+* A documentação oficial deixa a desejar, faltam alguns exemplos e passos importantes para a implementação. [Segue uma descrição](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Segue uma descrição") de como trabalhar com as diferentes alternativas de persistência.
 
 #### Referências:
 [Spline Oficial](https://absaoss.github.io/spline/ "Spline Oficial")
