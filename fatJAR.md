@@ -15,11 +15,11 @@ Uma boa ferramenta para gerar Fat Jars é o SBT, uma ferramenta de construção 
 
 
 
-	
+	```
 	├── src/
 	└── project/
     	└── assembly.sbt
-        
+        ```
         
 * Adicione essa linha ao arquivo assembly.sbt
 
