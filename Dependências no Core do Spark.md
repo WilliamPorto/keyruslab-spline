@@ -1,3 +1,5 @@
+# Dependências no Core do Spark
+
 O JAR completo nada mais é que um JAR criado a partir do código Scala apresentado na sessão __PySpark e Habilitação do Spline com Scala__ com todas as dependências necessárias, conforme apresentado na sessão específica.
 
 A novidade é que é possível gerar um JAR sem dependências, a pergunta é: É possível gerar o JAR do Spline sem dependência?
