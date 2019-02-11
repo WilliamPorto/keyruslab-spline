@@ -163,3 +163,48 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persisten
 ```
 
 > Utilizado: -Dspline.mongodb.url=mongodb://127.0.0.1:27017 -Dspline.mongodb.name=db_spline
+
+Provavelmente você teria 3 perguntas básicas, pois eu teria:
+
+1. Se algum link não funcionar, como eu poderei buscar por conta própria as dependências? Resposta: Acesse o [Search Maven](https://search.maven.org/ "Search Maven") e busque qualquer dependência, lembrando que as do Spline são específicas, então, não fugirá do que está a cima, ao encontrar a dependência o site disponibilizará várias formas de download, incluindo o JAR.
+
+2. Porque todas as dependências do Spline foram utilizadas na versão 0.3.1? Resposta: Isso será explicado na sessão sobre o Atlas.
+
+3. Aonde eu coloco todos esses JARs baixados? Resposta: Talvez a pergunta mais importante, é claro, precisamos colocar em algum local, esse local deve ser o core do Spark, é necessário que você encontre a pasta de JARs que fica dentro da instalação do seu Spark e colar lá junto com os vários outros JARs que já estão lá, abaixo será mostrado o meu caso, talvez sirva para você:
+
+```
+cp /root/JARs/spline-commons-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-commons-0.3.1.jar
+cp /root/JARs/spline-core-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-core-0.3.1.jar
+cp /root/JARs/spline-core-spark-adapter-api-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-core-spark-adapter-api-0.3.1.jar
+cp /root/JARs/spline-core-spark-adapter-2.3-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-core-spark-adapter-2.3-0.3.1.jar
+cp /root/JARs/spline-model-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-model-0.3.1.jar
+cp /root/JARs/spline-persistence-api-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-persistence-api-0.3.1.jar
+cp /root/JARs/spline-persistence-hdfs-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-persistence-hdfs-0.3.1.jar
+cp /root/JARs/spline-persistence-mongo-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-persistence-mongo-0.3.1.jar
+cp /root/JARs/spline-persistence-atlas-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-persistence-atlas-0.3.1.jar
+cp /root/JARs/atlas-notification-0.8.2.jar /usr/hdp/current/spark2-client/jars/atlas-notification-0.8.2.jar
+cp /root/JARs/atlas-typesystem-0.8.2.jar /usr/hdp/current/spark2-client/jars/atlas-typesystem-0.8.2.jar
+cp /root/JARs/atlas-common-0.8.2.jar /usr/hdp/current/spark2-client/jars/atlas-common-0.8.2.jar
+cp /root/JARs/atlas-intg-0.8.2.jar /usr/hdp/current/spark2-client/jars/atlas-intg-0.8.2.jar
+cp /root/JARs/json4s-native_2.11-3.2.11.jar /usr/hdp/current/spark2-client/jars/json4s-native_2.11-3.2.11.jar
+cp /root/JARs/slf4s-api_2.11-1.7.25.jar /usr/hdp/current/spark2-client/jars/slf4s-api_2.11-1.7.25.jar
+cp /root/JARs/jettison-1.3.7.jar /usr/hdp/current/spark2-client/jars/jettison-1.3.7.jar
+cp /root/JARs/mongo-java-driver-3.2.2.jar /usr/hdp/current/spark2-client/jars/mongo-java-driver-3.2.2.jar
+cp /root/JARs/casbah-commons_2.11-3.1.1.jar /usr/hdp/current/spark2-client/jars/casbah-commons_2.11-3.1.1.jar
+cp /root/JARs/casbah-core_2.11-3.1.1.jar /usr/hdp/current/spark2-client/jars/casbah-core_2.11-3.1.1.jar
+cp /root/JARs/casbah-query_2.11-3.1.1.jar /usr/hdp/current/spark2-client/jars/casbah-query_2.11-3.1.1.jar
+cp /root/JARs/salat-core_2.11-1.11.2.jar /usr/hdp/current/spark2-client/jars/salat-core_2.11-1.11.2.jar
+cp /root/JARs/salat-util_2.11-1.11.2.jar /usr/hdp/current/spark2-client/jars/salat-util_2.11-1.11.2.jar
+cp /root/JARs/joda-time-2.3.jar /usr/hdp/current/spark2-client/jars/joda-time-2.3.jar
+cp /root/JARs/json4s-ext_2.11-3.2.11.jar /usr/hdp/current/spark2-client/jars/json4s-ext_2.11-3.2.11.jar
+cp /root/JARs/kafka-clients-1.1.0.jar /usr/hdp/current/spark2-client/jars/kafka-clients-1.1.0.jar
+cp /root/JARs/spline-sample-0.3.1.jar /usr/hdp/current/spark2-client/jars/spline-sample-0.3.1.jar
+```
+
+Caso queira, poderá continuar enviando seu JAR na chamada do ```spark-submit```, mas seu JAR pequeno dessa vez, ou seja, apenas com o código feito em Scala sem dependências, pois as dependências já estão no core do Spark, mas eu acredito que seria mais interessante já colocar o seu JAR pequeno dentro do core do Spark, assim você realmente não precisará enviar nada para o ```spark-submit```.
+
+Então, gere seu JAR e copie no mesmo lugar:
+
+```
+cp /root/JARs/meu_jar_pequeno.jar /usr/hdp/current/spark2-client/jars/meu_jar_pequeno.jar
+```
