@@ -60,10 +60,11 @@ O ATLAS foi descontínuado desde a versão SPLINE0.3.2, a integração estava co
 
 Há tendência é que eles voltem a oferecer suporte, mas por enquanto devemos respeitar as versões que funcionaram corretamente, segue:
 
-Spark 2.3.0.2.6.5.0
-Apache Atlas 0.8.0.2.6.5.0
-Spline 0.3.1
-Kafka 1.0.0.2.6.5.0
+- Spark 2.3.0.2.6.5.0
+- Apache Atlas 0.8.0.2.6.5.0
+- Spline 0.3.1
+- Kafka 1.0.0.2.6.5.0
+
 Primeiro, você deve alterar o arquivo atlas-application-.properties para estabelecer a conexão do Spline com o Atlas kafka topic, da mesma maneira que você configuraria qualquer outra conxão do Atlas.
 
 Depois, copie o arquivo spline-meta-model.json para a pasta models do Atlas, é um arquivo JSON que mostra ao Atlas como o Spline enviará as informações para ele persistir em sua linhagem. (na Hortonworks o caminho é : /usr/hdp/current/atlas/models)
