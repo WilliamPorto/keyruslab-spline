@@ -54,8 +54,6 @@ ou
 ```
 spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.api.composition.ParallelCompositeFactory -Dspline.persistence.composition.factories=za.co.absa.spline.persistence.atlas.AtlasPersistenceFactory,za.co.absa.spline.persistence.hdfs.HdfsPersistenceFactory -Datlas.kafka.bootstrap.servers=caminho_do_bootstrap_server:porta_do_bootstrap_server" --jars nome_do_jar_completo.jar script_pyspark.py
 ```
-<br>
-<br>
 ## ATLAS:
 
 O ATLAS foi descontínuado desde a versão spline0.3.2, a integração estava com algumas falhas e a documentação que a equipe do SPLINE disponibilizava era insuficiente. A previsão é que uma nova API resolva esses problemas na versão 0.4, enquanto isso... Descrevemos nesse documento uma forma de habilitar o ATLAS, fazendo apenas algumas alterações nos arquivos do SPLINE.
