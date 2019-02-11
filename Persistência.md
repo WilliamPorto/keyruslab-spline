@@ -73,7 +73,7 @@ Veja se serve para você, mas no meu caso, foi copiado o arquivo de modelo para 
 cp /root/Model/spline-meta-model.json /usr/hdp/current/atlas-client/models/spline-meta-model.json
 ```
 
-Um passo muito importante que não deve ser esquecido, após copiar esse arquivo de modelo, reinicie o Atlas, sério, isso não funcionará se não for reiniciado, então sim, você poderá utilizar o Spline persistindo no Atlas.
+__Um passo muito importante que não deve ser esquecido, após copiar esse arquivo de modelo, reinicie o Atlas, sério, isso não funcionará se não for reiniciado, então sim, você poderá utilizar o Spline persistindo no Atlas.__
 
 Importante dizer que devemos respeitar as versões que funcionaram corretamente, segue:
 
