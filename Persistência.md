@@ -1,9 +1,9 @@
 # Persistências do SPLINE 
 
-Inicialmente o SPLINE tinha três alternativas para fazer o registro desse data lineage, MONGOdb, HDFS e ATLAS.
+Inicialmente o SPLINE tinha três alternativas para fazer o registro desse data lineage, MONGODB, HDFS e ATLAS.
 
 
-## MONGOdb:
+## MONGODB:
 
 #### Executar script PySpark com SPLINE persistindo no MongoDB
 ```
