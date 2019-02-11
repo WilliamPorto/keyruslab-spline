@@ -1,6 +1,6 @@
 # Dependências no Core do Spark
 
-O JAR completo nada mais é que um JAR criado a partir do código Scala conforme [apresentado aqui](https://search.maven.org/remotecontent?filepath=za/co/absa/spline/spline-commons/0.3.1/spline-commons-0.3.1.jar "apresentado aqui") com todas as dependências necessárias.
+O JAR completo nada mais é que um JAR criado a partir do código Scala conforme [apresentado aqui](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md "apresentado aqui") com todas as dependências necessárias.
 
 A novidade é que é possível gerar um JAR sem dependências, a pergunta é: É possível gerar o JAR do SPLINE sem dependência?
 Resposta: Não.
