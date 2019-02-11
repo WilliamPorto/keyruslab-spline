@@ -108,4 +108,4 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persisten
 
 > Utilizado: -Datlas.kafka.bootstrap.servers=sandbox-hdp.hortonworks.com:6667
 
-Não é preciso enviar o JAR completo na hora da execução com ```spark-submit```, aliás, quando é executado o SPLINE persistindo no Atlas é aconcelhável que não seja realmente enviado, pois o JAR fica muito grande e pode causar um certo delay de execução, ocasionando possíveis erros, portanto, [veja como é possível](https://search.maven.org/ "veja como é possível") __executar o SPLINE sem a necessidade de enviar o JAR completo ou algum JAR__.
+Não é preciso enviar o JAR completo na hora da execução com ```spark-submit```, aliás, quando é executado o SPLINE persistindo no Atlas é aconcelhável que não seja realmente enviado, pois o JAR fica muito grande e pode causar um certo delay de execução, ocasionando possíveis erros, portanto, [veja como é possível](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Depend%C3%AAncias%20no%20Core%20do%20Spark.md "veja como é possível") __executar o SPLINE sem a necessidade de enviar o JAR completo ou algum JAR__.
