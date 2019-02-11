@@ -94,7 +94,7 @@ ou
 spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.atlas.AtlasPersistenceFactory -Datlas.kafka.bootstrap.servers=caminho_do_bootstrap_server:porta_do_bootstrap_server" --jars nome_do_jar_completo.jar script_pyspark.py
 ```
 
-#### Executar script PySpark com SPLINE persistindo no Atlas utilizando o JAR Completo:
+#### Executar script PySpark com SPLINE persistindo no Atlas sem o JAR Completo:
 
 ```
 spark-submit --conf "spark.driver.extraJavaOptions=-Dspline.mode=BEST_EFFORT -Dspline.persistence.factory=za.co.absa.spline.persistence.atlas.AtlasPersistenceFactory -Datlas.kafka.bootstrap.servers=caminho_do_bootstrap_server:porta_do_bootstrap_server" script_pyspark.py
