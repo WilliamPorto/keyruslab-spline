@@ -10,7 +10,7 @@ O projeto consiste em duas partes:
 
 O projeto do SPLINE foi desenvolvido somente para o SPARK Scala. Segue documentação de como integrar o SPLINE com o PySpark.
 
-<https://www.google.com.br>
+<https://github.com/WilliamPorto/keyruslab-spline/blob/master/PySpark.md>
 	
 
 #### E uma Web UserInterface para a visualização dos dados registrados.
