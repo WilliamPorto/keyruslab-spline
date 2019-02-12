@@ -22,11 +22,11 @@ Uma boa ferramenta para gerar Fat Jars é o SBT, uma ferramenta de construção 
    ```
         
 * Adicione essa linha ao arquivo assembly.sbt
-
-
-	addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.2")
+	```
 	resolvers += Resolver.bintrayIvyRepo("com.eed3si9n", "sbt-plugins")
-    
+	addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.2")
+	```
+	
 * Defina as dependências a serem adicionadas no arquivo build.sbt
 	```
 	libraryDependencies += "za.co.absa.spline" % "spline-core" % "0.3.1"
