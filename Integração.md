@@ -1,10 +1,10 @@
 # Integrate spline with pyspark
 
-Toda a aplicação do SPLINE gira em torno do método `spark.enableLineageTracking()`, ele habilita a LineageTracking em nosso SparkSession e a partir dai todas as operações com os dados estão sendo persistidas em algum sistema (Mongodb, HDFS, ATLAS...)
+Toda a aplicação do SPLINE gira em torno do método `spark.enableLineageTracking()`, ele habilita a LineageTracking em nosso SparkSession e a partir dai todas as operações com os dados estão sendo persistidas em algum sistema (MongoDB, HDFS, Atlas).
 
-O problema é que o SPLINE foi desenvolvido para Scala e por isso não é possível chamar o método em um objeto org.apache.<strong>pyspark</strong>.sql.SparkSession
+O problema é que o SPLINE foi desenvolvido para Scala e por isso não é possível chamar o método em um objeto org.apache.<strong>pyspark</strong>.sql.SparkSession.
 
-A solução é criar um objeto PysparkHandler em Scala para receber o SparkSession do pyspark, e retornar uma SparkSession com o SPLINE habilitado:
+A solução é criar um objeto PysparkHandler em Scala para receber o SparkSession do PySpark, e retornar uma SparkSession com o SPLINE habilitado:
 ```scala
 package com.spline
 
