@@ -12,7 +12,7 @@ O projeto consiste em duas partes:
 
 #### E uma Web User Interface para a visualização dos dados registrados.
 
-* A Web User Interface do próprio SPLINE utiliza como base o MongoDB e pode ser verificada no site oficial constando nas Referências para saber como subi-la.
+* A Web User Interface do próprio SPLINE utiliza como base o MongoDB e pode ser verificada no site oficial para saber como subi-la.
 
 * Já a utilização do Atlas deixa um pouco a desejar no site oficial, devido a falta de alguns exemplos e passos importantes para a implementação. [Segue uma descrição](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Segue uma descrição") de como trabalhar com as diferentes alternativas de persistência e utilização do Atlas como persistência de linhagem.
 
