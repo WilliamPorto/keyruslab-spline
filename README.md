@@ -2,7 +2,7 @@
 
 A intenção deste documento é compartilhar conhecimento e algumas soluções que podem ser complementares às funcionalidades do SPLINE
 
-SPLINE (de **S**park **L**ineage) é um proejto que ajuda pessoas a terem insights sobre dados processados pelo Apache Spark.
+SPLINE (de **S**park **L**ineage) é um projeto que ajuda pessoas a terem insights sobre dados processados pelo Apache Spark.
 
 O projeto consiste em duas partes:
 
