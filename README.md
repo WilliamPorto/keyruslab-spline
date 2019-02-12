@@ -14,6 +14,8 @@ O projeto consiste em duas partes:
 
 * A documentação oficial deixa a desejar, faltam alguns exemplos e passos importantes para a implementação. [Segue uma descrição](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Segue uma descrição") de como trabalhar com as diferentes alternativas de persistência.
 
+* Observe nas referências o site oficial, lá consta como subir a interface do SPLINE quando utilizado com o MongoDB. [Segue uma descrição](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Segue uma descrição") de como trabalhar com as diferentes alternativas de persistência.
+
 #### Referências:
 [Spline Oficial](https://absaoss.github.io/spline/ "Spline Oficial")
 
