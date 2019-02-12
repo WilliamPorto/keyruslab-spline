@@ -1,4 +1,4 @@
-# Integrate spline with pyspark
+# Integração do Spline com PySpark
 
 Toda a aplicação do SPLINE gira em torno do método `spark.enableLineageTracking()`, ele habilita a LineageTracking em nosso SparkSession e a partir dai todas as operações com os dados estão sendo persistidas em algum sistema (MongoDB, HDFS, Atlas).
 
@@ -22,7 +22,7 @@ object Spline {
 
 }
 ```
-- Gerar um [FatJAR](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md) do código Scala a cima  
+- [Gerar](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md "Gerar") um FatJAR do código Scala a cima  
 - Carregar o [FatJAR](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md) em nossa aplicação ( pyspark --jars myFileJar.jar )
 - Acessar o [FatJAR](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md) e seus objetos em nossa aplicação 
 
