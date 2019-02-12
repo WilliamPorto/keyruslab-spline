@@ -10,11 +10,11 @@ O projeto consiste em duas partes:
 
 * O projeto do SPLINE foi desenvolvido somente para o Spark Scala. [Segue documentação](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Integração.md "Segue documentação") de como integrar o SPLINE com o PySpark.
 
-#### E uma Web UserInterface para a visualização dos dados registrados.
+#### E uma Web User Interface para a visualização dos dados registrados.
 
-* A documentação oficial deixa a desejar, faltam alguns exemplos e passos importantes para a implementação. [Segue uma descrição](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Segue uma descrição") de como trabalhar com as diferentes alternativas de persistência.
+* A Web User Interface utiliza como base o MongoDB e pode ser verificada no site oficial constando nas Referências para saber como subi-la.
 
-* Observe nas referências o site oficial, lá consta como subir a interface do SPLINE quando utilizado com o MongoDB. [Segue uma descrição](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Segue uma descrição") de como trabalhar com as diferentes alternativas de persistência.
+* Já a utilização do Atlas deixa um pouco a desejar no site oficial, devido a falta de alguns exemplos e passos importantes para a implementação. [Segue uma descrição](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Segue uma descrição") de como trabalhar com as diferentes alternativas de persistência e utilização do Atlas como persistência de linhagem.
 
 #### Referências:
 [Spline Oficial](https://absaoss.github.io/spline/ "Spline Oficial")
