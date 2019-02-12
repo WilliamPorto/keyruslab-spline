@@ -22,8 +22,8 @@ object Spline {
 
 }
 ```
-- [Gerar](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md "Gerar") um FatJAR do código Scala a cima  
-- [Carregar](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persist%C3%AAncia.md) o FatJAR em nossa aplicação `pyspark --jars myFileJar.jar`
+- [Gerar](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md "Gerar") um FatJAR do código Scala a cima.
+- [Carregar](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persist%C3%AAncia.md "Carregar") o FatJAR em nossa aplicação `pyspark --jars myFileJar.jar` ou [copie](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Depend%C3%AAncias%20no%20Core%20do%20Spark.md "copie") seu JAR dentro do core do Spark.
 - Acessar o FatJAR e seus objetos em nossa aplicação:
 
 ```python
