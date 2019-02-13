@@ -109,3 +109,32 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Dspline.persisten
 > Utilizado: -Datlas.kafka.bootstrap.servers=sandbox-hdp.hortonworks.com:6667
 
 Não é preciso enviar o JAR completo na hora da execução com ```spark-submit```, aliás, quando é executado o SPLINE persistindo no Atlas é aconcelhável que não seja realmente enviado, pois o JAR fica muito grande e pode causar um certo delay de execução, ocasionando possíveis erros, portanto, [veja como é possível](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Depend%C3%AAncias%20no%20Core%20do%20Spark.md "veja como é possível") __executar o SPLINE sem a necessidade de enviar o JAR completo ou algum JAR__.
+
+
+## ATLAS e NiFi (End-to-End Lineage):
+
+Uma representação visual da linhagem de dados(data lineage) é essencial para compreender os diferentes processos envolvidos em um fluxo de dados(data flow) e suas dependências. A gestão de metadados(metadata management) é a chave para capturar dados empresariais e reprensentar essa linhagem de dados de uma ponta a outra do fluxo.
+
+Nesse fluxo, que começa pela ingestão de dados, limpeza/transformação até a etapa de análise(analytics), diversos componentes enstao envolvidos para solucionar os problemas de bigdata empresárias. Falando de Hortonworks temos Kaka, Nifi, Spark, Hive, Hive LLAP etc.
+
+O SPLINE pode ser utilizado como uma ferramenta chave nessa integração entre ferramentas.
+
+Um ótima solução foi descrita na comunidade do Hortonworks [End to End Atlas Lineage with Nifi, Spark, Hive](https://br.hortonworks.com/blog/hdf-3-1-blog-series-part-6-introducing-nifi-atlas-integration/)
+
+Integração entre ferramentas sempre é um processo complicado, especialmente quando estamos modificando uma ferramenta que não previa essa funcionalidade. Por isso vamos disponibilizar a solução para o <strong>Step 2) Spark --> HDFS</strong> do artigo.
+</br>
+</br>
+</br>
+#### spline-persistence-atlas-0.3.1
+[spline-persistence-atlas-0.3.1](https://github.com/WilliamPorto/keyruslab-spline/tree/master/Downloads/Nifi_ModifiedAtlas) com o `za.co.absa.spline.persistence.atlas.conversion.DatasetConverter` modificado para reconhecer a lineage do Nifi como um input válido.
+
+#### spark-submit com as 2 novas propriedades necessárias
+```
+spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Datlas.kafka.bootstrap.servers=sandbox-hdp.hortonworks.com:6667 -Dspline.persistence.factory=za.co.absa.spline.persistence.atlas.AtlasPersistenceFactory -Dcluster.name=Sandbox -Dabsolute.base.path=hdfs://sandbox-hdp.hortonworks.com:8020" --jars pHandlerATLASPackage.jar criptomoedasJob.py
+```
+> Utilizado: -Dcluster.name=Sandbox
+> 
+> Utilizado: -Dabsolute.base.path=hdfs://sandbox-hdp.hortonworks.com:8020
+
+
+
