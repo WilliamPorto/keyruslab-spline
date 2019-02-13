@@ -115,9 +115,9 @@ Não é preciso enviar o JAR completo na hora da execução com ```spark-submit`
 
 Uma representação visual da linhagem de dados(data lineage) é essencial para compreender os diferentes processos envolvidos em um fluxo de dados(data flow) e suas dependências. A gestão de metadados(metadata management) é a chave para capturar dados empresariais e reprensentar essa linhagem de dados de uma ponta a outra do fluxo.
 
-Nesse fluxo, que começa pela ingestão de dados, limpeza/transformação até a etapa de análise(analytics), diversos componentes enstao envolvidos para solucionar os problemas de bigdata empresárias. Falando de Hortonworks temos Kaka, Nifi, Spark, Hive, Hive LLAP etc.
+Nesse fluxo, que começa pela ingestão de dados, limpeza/transformação até a etapa de análise(analytics), diversos componentes enstao envolvidos para solucionar os problemas de bigdata empresárias. Falando de Hortonworks temos Kafka, Nifi, Spark, Hive, Hive LLAP etc.
 
-O SPLINE pode ser utilizado como uma ferramenta chave nessa integração entre ferramentas.
+O SPLINE pode ser utilizado é uma peça chave nessa integração entre ferramentas.
 
 Um ótima solução foi descrita na comunidade do Hortonworks [End to End Atlas Lineage with Nifi, Spark, Hive](https://br.hortonworks.com/blog/hdf-3-1-blog-series-part-6-introducing-nifi-atlas-integration/)
 
