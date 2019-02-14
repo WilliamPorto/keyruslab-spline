@@ -48,3 +48,9 @@ sparkEnabledLineage=SparkSesion(sc,ssl)
 
 #AGORA TEMOS UM SparkSession COM O LineageTracking ENABLED
 ```
+
+#### Referências
+
+[Spark - Calling Scala code from PySpark](http://aseigneurin.github.io/2016/09/01/spark-calling-scala-code-from-pyspark.html "Spark - Calling Scala code from PySpark")
+
+[Issue: Integrate spline with pyspark #48](https://github.com/AbsaOSS/spline/issues/48 "Issue: Integrate spline with pyspark #48")
