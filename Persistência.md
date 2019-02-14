@@ -142,3 +142,11 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Datlas.kafka.boot
 [Return Atlas support to Spline 0.3 #75](https://github.com/AbsaOSS/spline/issues/75 "Return Atlas support to Spline 0.3 #75")
 
 [How To Install MongoDB on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 "How To Install MongoDB on CentOS 7")
+
+[Apache NiFi Overview](https://nifi.apache.org/docs/nifi-docs/html/overview.html "Apache NiFi Overview")
+
+[Hortonworks DataFlow (HDF) 3.1 blog series part 5: Introducing Apache NiFi-Atlas integration](https://br.hortonworks.com/blog/hdf-3-1-blog-series-part-6-introducing-nifi-atlas-integration/ "Hortonworks DataFlow (HDF) 3.1 blog series part 5: Introducing Apache NiFi-Atlas integration")
+
+[End to End Atlas Lineage with Nifi , Spark , Hive](https://community.hortonworks.com/articles/186772/end-to-end-atlas-lineage-with-nifi-spark-hive.html "End to End Atlas Lineage with Nifi , Spark , Hive")
+
+[Installing and Upgrading NiFi](https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.3.1/installing-upgrading-nifi/content/starting_and_stopping_nifi_on_linux.html "Installing and Upgrading NiFi")
