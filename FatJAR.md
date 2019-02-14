@@ -66,3 +66,7 @@ Uma boa ferramenta para gerar Fat Jars é o SBT, uma ferramenta de construção 
     oldStrategy(x)
 }
 ```
+
+#### Referências
+
+[SBT by Example](https://www.scala-sbt.org/1.0/docs/sbt-by-example.html "SBT by Example")
