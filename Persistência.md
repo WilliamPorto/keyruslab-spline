@@ -133,8 +133,8 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Datlas.kafka.boot
 > 
 > Utilizado: -Dabsolute.base.path=hdfs://sandbox-hdp.hortonworks.com:8020
 
-#### teste
-![Spline_Atlas_Nifi](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Repositorio%20de%20Imagens%20Spline_Atlas/nifiSparkOutput.png)
+#### AtlasUI End-to-End lineage (Local-->HDFS-->Spark-->HDFS-->HIVE)
+![Spline_Atlas_Nifi](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Repositorio%20de%20Imagens%20Spline_Atlas/endToEnd.png)
 
 
 #### Referências
