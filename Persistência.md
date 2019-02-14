@@ -139,4 +139,6 @@ spark-submit --driver-java-options "-Dspline.mode=BEST_EFFORT -Datlas.kafka.boot
 
 [Issue: Sample / Documentation to integrate with Apache Atlas #31](https://github.com/AbsaOSS/spline/issues/31 "Issue: Sample / Documentation to integrate with Apache Atlas #31")
 
+[Return Atlas support to Spline 0.3 #75](https://github.com/AbsaOSS/spline/issues/75 "Return Atlas support to Spline 0.3 #75")
+
 [How To Install MongoDB on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 "How To Install MongoDB on CentOS 7")
