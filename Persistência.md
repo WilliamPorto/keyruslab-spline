@@ -75,7 +75,7 @@ cp /root/Model/spline-meta-model.json /usr/hdp/current/atlas-client/models/splin
 
 __Um passo muito importante que não deve ser esquecido, após copiar esse arquivo de modelo, reinicie o Atlas, sério, isso não funcionará se não for reiniciado, então sim, você poderá utilizar o Spline persistindo no Atlas.__
 
-Importante dizer que devemos respeitar as versões que funcionaram corretamente conforme apresentados na introdução desse repositório.
+Importante dizer que devemos respeitar as versões que funcionaram corretamente conforme apresentados na [introdução desse repositório](https://github.com/WilliamPorto/keyruslab-spline/blob/master/README.md "introdução desse repositório").
 
 #### Executar script PySpark com SPLINE persistindo no Atlas utilizando o JAR Completo:
 
