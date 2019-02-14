@@ -16,6 +16,8 @@ O projeto consiste em duas partes:
 
 * Já a utilização do Atlas deixa um pouco a desejar no site oficial, devido a falta de alguns exemplos e passos importantes para a implementação. [Segue uma descrição](https://github.com/WilliamPorto/keyruslab-spline/blob/master/Persistência.md "Segue uma descrição") de como trabalhar com as diferentes alternativas de persistência e utilização do Atlas como persistência de linhagem.
 
+__Para esse projeto foi utilizado a Hortonworks Sandbox HDP 2.6.5 na Oracle VM VirtualBox com: CentOS Linux 7 (Core) - Python 2.7.5 - Spark 2.3.0.2.6.5.0 - Apache Atlas 0.8.0.2.6.5.0 - Spline 0.3.1 - Kafka 1.0.0.2.6.5.0__
+
 #### Referências:
 [Spline Oficial](https://absaoss.github.io/spline/ "Spline Oficial")
 
