@@ -18,8 +18,10 @@ O projeto consiste em duas partes:
 
 __Para esse projeto foi utilizado a Hortonworks Sandbox HDP 2.6.5 na Oracle VM VirtualBox com: CentOS Linux 7 (Core) - Python 2.7.5 - Spark 2.3.0.2.6.5.0 - Apache Atlas 0.8.0.2.6.5.0 - Spline 0.3.1 - Kafka 1.0.0.2.6.5.0__
 
-#### Referências:
+#### Referências
+
 [Spline Oficial](https://absaoss.github.io/spline/ "Spline Oficial")
 
-#### Downloads:
+#### Downloads
+
 [Downloads](https://github.com/WilliamPorto/keyruslab-spline/tree/master/Downloads "Downloads")
