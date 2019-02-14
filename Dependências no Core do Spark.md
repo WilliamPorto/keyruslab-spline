@@ -100,3 +100,7 @@ Então, gere seu JAR e copie no mesmo lugar:
 ```
 cp /root/JARs/meu_jar_pequeno.jar /usr/hdp/current/spark2-client/jars/meu_jar_pequeno.jar
 ```
+
+#### Referências
+
+[Issue: Sample / Documentation to integrate with Apache Atlas #31](https://github.com/AbsaOSS/spline/issues/31 "Issue: Sample / Documentation to integrate with Apache Atlas #31")
