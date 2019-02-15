@@ -1,4 +1,4 @@
-# Integração do Spline com PySpark
+# Integração do SPLINE com PySpark
 
 Toda a aplicação do SPLINE gira em torno do método `spark.enableLineageTracking()`, ele habilita a LineageTracking em nosso SparkSession e a partir dai todas as operações com os dados estão sendo persistidas em algum sistema (MongoDB, HDFS, Atlas).
 
