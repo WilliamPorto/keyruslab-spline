@@ -6,20 +6,18 @@ O problema é que o SPLINE foi desenvolvido para Scala e por isso não é possí
 
 A solução é criar um objeto PysparkHandler em Scala para receber o SparkSession do PySpark, e retornar uma SparkSession com o SPLINE habilitado:
 ```scala
-package com.spline
+package mySplinePackage
 
-import org.apache.spark.sql.SparkSession
 import za.co.absa.spline.core.SparkLineageInitializer._
+import org.apache.spark.sql.SparkSession
 
-object Spline {
-
-    def sparkLineage(spark: SparkSession): SparkSession = {
-
-       spark.enableLineageTracking()
-       spark
-
-    }
-
+object PysparkHandler {
+  def setSparkListener(spark : SparkSession): SparkSession = {
+  
+  spark.enableLineageTracking()
+  spark
+  
+  }
 }
 ```
 - [Gerar](https://github.com/WilliamPorto/keyruslab-spline/blob/master/FatJAR.md "Gerar") um FatJAR do código Scala a cima.
